@@ -1,5 +1,5 @@
-import streamlit as st
-from PIL import Image
+import streamlit as st # importando o stream
+from PIL import Image # importando a lib que permite envio de imagens
 
 # ============================================
 #   CONFIGURAÇÕES DA PÁGINA
@@ -23,7 +23,7 @@ st.write(
     """
 )
 
-st.markdown("---")
+st.markdown("---") # faz uma linha separando as partes do site
 
 # ============================================
 #   LISTA DE PRODUTOS
@@ -35,21 +35,21 @@ st.header("🎁 Produtos disponíveis")
 product_list = [
     {
         "nome": "Topper de Bolo Personalizado",
-        "preco": "R$ 15,00",
-        "descricao": "Topper totalmente personalizado com tema, nome e idade.",
-        "imagem": "topper.png"   # <-- Substitua pelas imagens reais na pasta do app
+        "preco": "R$ ",
+        "descricao": "",
+        "imagem": ""   # <-- Substitua pelas imagens reais na pasta do app
     },
     {
         "nome": "Lembrancinhas Personalizadas",
-        "preco": "R$ 4,50",
-        "descricao": "Lembrancinhas feitas sob medida para festas e eventos.",
-        "imagem": "lembrancinha.png"
+        "preco": "",
+        "descricao": "",
+        "imagem": ""
     },
     {
         "nome": "Caixinhas Decorativas",
-        "preco": "R$ 7,00",
-        "descricao": "Caixinhas temáticas, perfeitas para presentes e festas.",
-        "imagem": "caixinha.png"
+        "preco": "R$ ",
+        "descricao": "",
+        "imagem": ""
     }
 ]
 
@@ -75,13 +75,13 @@ for index, product in enumerate(product_list):
         st.caption(product["descricao"])
 
         whatsapp_link = (
-            f"https://wa.me/55DDDNUMERO?text=Olá! Tenho interesse em: {product['nome']}" # numero do wpp
+            f"https://wa.me/5519992642050?text=Olá! Tenho interesse em: {product['nome']}" # numero do wpp
         )
 
         st.link_button("Falar no WhatsApp", whatsapp_link)
 
 
-st.markdown("---")
+st.markdown("---") # faz uma linha separando as partes do site
 
 # ============================================
 #   CONTATO
@@ -94,8 +94,8 @@ st.write(
     """
 )
 
-whatsapp_general = "https://wa.me/55DDDNUMERO?text=Olá! Gostaria de saber mais sobre os personalizados."
+whatsapp_general = "https://wa.me/5519992642050?text=Olá! Gostaria de saber mais sobre os personalizados."
 st.link_button("📲 Chamar no WhatsApp", whatsapp_general)
 
-st.markdown("---")
+st.markdown("---") # faz uma linha separando as partes do site
 st.caption("Site criado com carinho para a Magia Personaliza ✨")
